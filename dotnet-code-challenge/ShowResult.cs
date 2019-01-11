@@ -19,9 +19,8 @@ namespace dotnet_code_challenge
             _orderedResult = service.GetService<IOrderedResult>();   
         }
 
-        public void Init(string folderPath)
-        {
-            var fileList = Directory.GetFiles(@folderPath);
+       public void Init(string[] fileList)
+       {
             foreach (var file in fileList)
             {
                 RenderHorseList(file);
